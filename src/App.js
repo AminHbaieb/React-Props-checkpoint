@@ -1,28 +1,26 @@
-import logo from "./logo.svg";
+import imageInSrc from "./Components/Profile/imageInSrc.jpg";
+import Profile from "./Components/Profile/Profile";
 import "./App.css";
-import imageINSrc from "./Profile";
 
 function App() {
+    const handleAlert = (name) => {
+        alert(name);
+    };
     return (
         <div className="App">
-            <watch>
-                <img className="myimg" src={imageInSrc} alt="my_pic" />
-            </watch>
-
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
+            <Profile
+                fullName="amin hbaieb"
+                bio="Single"
+                profession="student"
+                handleAlert={handleAlert}
+            >
+                <img
+                    className="myimg"
+                    src={imageInSrc}
+                    alt="my_pic"
+                    style={{ width: 200 }}
+                />
+            </Profile>
         </div>
     );
 }
